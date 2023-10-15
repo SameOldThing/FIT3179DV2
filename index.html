@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    <style>
+        /* CSS to center the pie chart */
+        #pie_chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 65%;
+            /* Adjust the width as needed */
+        }
+
+        #line_chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 80%;
+            /* Adjust the width as needed */
+        }
+
+        #bar_chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 75%;
+            /* Adjust the width as needed */
+        }
+
+        #area_chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 75%;
+            /* Adjust the width as needed */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="width: 65%;">GAMBLING TAKEOVER</h1>
+
+    <div class="centered-text">
+        <p style="width: 65%;">
+            <span class="big-word">31%</span>
+            <br>
+            of Victorian high school students participated in gambling.
+            <br>
+            <br>
+            <span class="big-word">25%</span>
+            <br>
+            gambling problems lead to relationship difficulties.
+            <br>
+            <br>
+            <span class="big-word">25%</span>
+            <br>
+            children can name four or more gambling brands.
+            <br>
+            <br>
+            <span class="big-word">42%</span>
+            <br>
+            of people who deal with gambling problems have been diagnosed with depression
+        </p>
+    </div>
+    <h2>Australia is most at risk!</h2>
+    <div id="dot_map"></div>
+    <script type="text/javascript">
+
+        var spec2 = "js/dv2map.vg.json";
+        vegaEmbed('#dot_map', spec2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+    </script>
+    <p><em>Figure 1</em></p>
+    <p><em>NOTE: values = 0 means no accurate information available for country.</em></p>
+    <div style="display: flex; justify-content: space-between;">
+        <p style="width: 49%;">
+            From the map, we can see that the country who
+            <br>
+            spends the most amount of money per capita
+            <br>
+            on gambling, is Australia. This means that in
+            <br>
+            Australia, minors are at a higher risk of being
+            <br>
+            exposed to gambling compared other countries
+            <br>
+            around the world.
+        </p>
+        <p style="width: 120%;">
+            This type of gambling activity will leads to young
+            <br>
+            adults being falsely mislead into believing
+            <br>
+            that gambling may be a regular hobby or past time,
+            <br>
+            however, the reality is far from it.
+            <br>
+            <br>
+
+        </p>
+    </div>
+
+    <h2>What types of gambling?</h2>
+
+    <div id="bar_chart"></div>
+
+    <script type="text/javascript">
+
+        var spec2 = "js/week10hw2.json";
+        vegaEmbed('#bar_chart', spec2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+    <p><em>Figure 2</em></p>
+    <div style="display: flex; justify-content: space-between;">
+        <p style="width: 49%;">
+            The chart above indicates that gambling machines by far
+            <br>
+            contribute the net loss. What may seem like an
+            <br>
+            innocent $5 play may and often does turn into an
+            <br>
+            uncontrollable addiction. In conjunction with the
+            <br>
+            fact that most of these machines have bright,
+            <br>
+            colorful cartoons and animations for every spin,
+            <br>
+            and the results are catastrophic.
+        </p>
+        <p style="width: 120%;">
+            The chart above also depicts wagering that is another primary
+            <br>
+            contributor to the net losses of Australia. Wagering is most
+            <br>
+            commonly called sports betting or horse betting. Much like
+            <br>
+            gambling machines, minors stand a high chance of being
+            <br>
+            exposed to sports/horse betting advertisements when they
+            <br>
+            themselves watch sport as they commonly appear during breaks.
+        </p>
+    </div>
+
+    <h2>New regulations are needed! </h2>
+    <div id="line_chart"></div>
+
+    <script type="text/javascript">
+
+        var spec2 = "js/linechart.json";
+        vegaEmbed('#line_chart', spec2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+    <p><em>Figure 3</em></p>
+    <div style="display: flex; justify-content: space-between;">
+        <p style="width: 49%;">
+            The line chart indicates that <span class="darkorange-text">New South Wales</span>,
+            <br>
+            <span class="burlywood-text">Victoria</span> and <span class="plum-text">Queensland</span> contribute the
+            most to the total gambling net loss of Australia. This indicates
+            <br>
+            that while the risk of children and teenagers
+            <br>
+            being exposed to gambling in hese states is much
+            <br>
+            higher than others, but also indicates that these
+            <br>
+            states contain many individuals who suffer from
+            <br>
+            gambling addiction and financial difficulties.
+        </p>
+        <p style="width: 120%;">
+            The chart also indicates a steep drop in net losses
+            <br>
+            in 2010 compared to previous years for <span class="darkorange-text">New South Wales</span>. This is due
+            <br>
+            to the new gambling regulations that were introduced in 2010.
+            <br>
+            These regulations were updated from the previous one in 2002,
+            <br>
+            and some changes include a ban on the use of credit cards to
+            <br>
+            gamble at casinos and licensed clubs among others and from
+            <br>
+            the chart, it worked.
+            <br>
+            <br>
+
+        </p>
+    </div>
+
+    <h2>The fallout of chronic gambling</h2>
+    <div id="pie_chart"></div>
+
+    <script type="text/javascript">
+
+        var spec2 = "js/piechart.json";
+        vegaEmbed('#pie_chart', spec2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+    <p><em>Figure 4</em></p>
+    <div style="display: flex; justify-content: space-between;">
+        <p style="width: 49%;">
+            The pie chart depicts that the biggest harm gambling
+            <br>
+            addiction can cause a person, is negatively impacting their
+            <br>
+            <span class="cornblue-text">relationships</span>. Potentially being even more important
+            <br>
+            than <span class="cornblue-text">relationships</span> is an individual's <span
+                class="midpurple-text">Health</span>. Poor <span class="midpurple-text">health</span>
+            <br>
+            can sometimes impact more than just an individual, but the
+            <br>
+            people around them too, so it is inherently linked to
+            <br>
+            their <span class="cornblue-text">relationships</span>.
+        </p>
+        <p style="width: 115%;">
+            It is also worth noting that <span class="orange-text">work/study</span> is also side
+            <br>
+            effect of unhealthy gambling habits. This means that individuals may
+            <br>
+            experience a drop in their grades, or poor work output as a result
+            <br>
+            of excessive gambling which could lead to them losing their jobs.
+            <br>
+            <br>
+        </p>
+    </div>
+
+    <h2>The number 1 title <span class="emerald-text">Australia</span> doesn't want!</h2>
+    <div id="area_chart"></div>
+
+    <script type="text/javascript">
+
+        var spec2 = "js/areachart.json";
+        vegaEmbed('#area_chart', spec2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+    <p><em>Figure 5</em></p>
+    <div style="display: flex; justify-content: space-between;">
+        <p style="width: 49%;">
+            The area charts depicts a very grim picture for the world.
+            <br>
+            It shows how many countries gambling loss per adult is only
+            <br>
+            ever increasing, this due to more teenagers being influenced
+            <br>
+            and engaging in gambling at a early age, and the
+            <br>
+            governments doing little to nothing to prevent it.
+        </p>
+        <p style="width: 110%;">
+            What is also very concering is <span class="emerald-text">Australia</span> being at the top of the list.
+            <br>
+            Paired with the ever increasing net loss per adult, the <span class="emerald-text">Australian</span>
+
+            <br>
+            government needs to take immediate action to prevent this number
+            <br>
+            from increasing in the future.
+            <br>
+            <br>
+        </p>
+    </div>

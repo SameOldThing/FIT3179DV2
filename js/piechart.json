@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with labels from external data.",
+    "height": 300,
+    "width": 300,
+    "title": {
+        "text": "Different types of harm to a person due to gambling"
+    },
+    "data": {
+        "url": "data/harms.csv"
+    },
+    "mark": "arc",
+    "encoding": {
+        "theta": {
+            "field": "Percentage",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Harms",
+            "type": "nominal",
+            "scale": {
+                "scheme": "set3"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Harms",
+                "type": "nominal",
+                "title": "Harm"
+            },
+            {
+                "field": "Percentage",
+                "type": "quantitative",
+                "title": "Percentage(%)"
+            }
+        ]
+    }
+}

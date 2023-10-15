@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "An overlapping area chart with labels from external data.",
+    "width": 400,
+    "height": 400,
+    "padding": 5,
+    "title": {
+        "text": "Top 8 countries net losses per adult ($USD)"
+    },
+    "data": {
+        "url": "data/countriesrank.csv"
+    },
+    "mark": {
+        "type": "area",
+        "interpolate": "monotone"
+    },
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal"
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "stack": null,
+            "title": "Loss through gambling per adult ($USD)",
+            "scale": {
+                "domain": [
+                    0,
+                    1300
+                ]
+            }
+        },
+        "color": {
+            "field": "Country",
+            "type": "nominal",
+            "scale": {
+                "scheme": "set2"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "type": "ordinal",
+                "title": "Year"
+            },
+            {
+                "field": "Country",
+                "type": "nominal",
+                "title": "State"
+            },
+            {
+                "field": "Value",
+                "type": "quantitative",
+                "title": "Loss through gambling per adult ($USD)"
+            }
+        ]
+    }
+}
